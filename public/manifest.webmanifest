@@ -1,0 +1,10 @@
+{
+  "name": "AKRIVO Skin",
+  "short_name": "AKRIVO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf3",
+  "theme_color": "#fffaf3",
+  "description": "Skincare guidance and wellness insights.",
+  "icons": []
+}
