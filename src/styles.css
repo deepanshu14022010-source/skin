@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-cream text-ink antialiased;
+    background:
+      radial-gradient(circle at top left, rgba(247, 216, 210, 0.55), transparent 34rem),
+      linear-gradient(160deg, #fffaf3 0%, #f8fbf5 58%, #fffdf9 100%);
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg border border-[#eee4d9] bg-porcelain/90 p-5 shadow-soft;
+  }
+
+  .btn-primary {
+    @apply min-h-12 rounded-lg bg-gradient-to-r from-[#2f7567] to-rose px-5 font-black text-white shadow-lg transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply min-h-12 rounded-lg bg-[#e7f1eb] px-5 font-black text-[#315f55] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0;
+  }
+
+  .input {
+    @apply min-h-12 w-full rounded-lg border border-[#e3d7cd] bg-white px-4 py-3 outline-none transition focus:border-rose focus:ring-4 focus:ring-rose/20;
+  }
+
+  .eyebrow {
+    @apply mb-1 text-xs font-black uppercase tracking-normal text-rose;
+  }
+
+  .muted {
+    @apply text-sm leading-6 text-[#73716d];
+  }
+
+  .badge {
+    @apply rounded-full bg-[#eef5ef] px-3 py-1 text-xs font-black text-[#2f7567];
+  }
+
+  .bottom-nav {
+    @apply sticky bottom-3 z-20 mx-auto mt-5 grid max-w-3xl grid-cols-5 gap-1 rounded-lg border border-[#e3d7cd] bg-porcelain/95 p-1 shadow-soft backdrop-blur;
+  }
+
+  .bottom-nav button {
+    @apply min-h-11 rounded-md text-xs font-black text-[#73716d];
+  }
+
+  .bottom-nav button.active {
+    @apply bg-[#e7f1eb] text-[#245c52];
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-gradient-to-r from-[#f2e7dd] via-[#fff7ef] to-[#f2e7dd];
+  }
+}
